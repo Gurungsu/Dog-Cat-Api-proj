@@ -1,0 +1,49 @@
+#progOutput tbody img {
+  max-width: 128px;
+}
+#pageTitle {
+  grid-area: header;
+}
+
+#progOutput {
+  grid-area: catdata;
+}
+
+#userInput {
+  grid-area: control;
+}
+
+#topContainer {
+  border: 2px solid red;
+}
+
+#pageTitle {
+  background-color: forestgreen;
+}
+
+#userInput {
+  background-color: orange;
+}
+
+#progOutput {
+  background-color: brown;
+}
+#topContainer {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 
+    "header header"
+    "catdata control";
+}
+
+#pageTitle {
+  grid-area: header;
+}
+
+#progOutput {
+  grid-area: catdata;
+}
+
+#userInput {
+  grid-area: control;
+}

@@ -1,0 +1,125 @@
+"use strict";
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_axios.default.get("https://dog.ceo/api/breeds/list/all").then(r => r.data).then(dogData => {});
+
+let theInput;
+let thebutton;
+theInput = document.querySelector("#userInput > input[type=text]");
+thebutton = document.querySelector("#userInput > button");
+let breedLimit = Number(theInput?.value);
+let tableBody;
+tableBody = document.querySelector("#progOutput table > tbody");
+console.log(thebutton);
+thebutton?.addEventListener("click", () => {
+  let oldRows;
+  oldRows = tableBody?.querySelectorAll("tr");
+
+  if (oldRows) {
+    for (let k = 0; k < oldRows?.length; k++) {
+      const oldOne = oldRows[k];
+      tableBody?.removeChild(oldOne);
+    }
+  }
+
+  _axios.default.get(catURL, {
+    params: {
+      limit: breedLimit
+    }
+  }).then(r => r.data).then(breeds => {
+    const meowArr = breeds.map(b => {
+      return {
+        name: b.name,
+        description: b.description,
+        image: b.image
+      };
+    });
+    return meowArr;
+  });
+});
+if (isNaN(breedLimit)) breedLimit = 3;
+const catURL = "https://api.thecatapi.com/v1/breeds";
+
+_axios.default.get(catURL, {
+  params: {
+    limit: breedLimit
+  }
+}).then(r => r.data).then(breeds => {
+  const meowArr = breeds.map(b => {
+    return {
+      name: b.name,
+      description: b.description,
+      image: b.image
+    };
+  });
+  return meowArr;
+}).then(meows => {
+  let tableBody;
+  tableBody = document.querySelector("#progOutput table > tbody");
+  meows.forEach(m => {
+    const catImage = document.createElement("img");
+    catImage.setAttribute("src", m.image.url);
+    const tr = document.createElement("tr");
+    const meowNameCell = document.createElement("td");
+    meowNameCell.appendChild(document.createTextNode(m.name));
+    const meowDescCell = document.createElement("td");
+    meowDescCell.appendChild(document.createTextNode(m.description));
+    const meowImagCell = document.createElement("td");
+    meowImagCell.appendChild(catImage);
+    tr.appendChild(meowNameCell);
+    tr.appendChild(meowDescCell);
+    tr.appendChild(meowImagCell);
+    tableBody?.appendChild(tr);
+  });
+}).then(dogPics => {
+  let tableBody;
+  tableBody = document.querySelector("#progOutputDog table > tbody");
+
+  for (let i = 0; i < 10; i++) {
+    const dogImage = document.createElement("img");
+    dogImage.setAttribute("src", dogPics.message[i]);
+    tableBody?.appendChild(dogImage);
+  }
+}); // https://dog.ceo/api/breeds/list/all
+
+
+const BREEDS_URL = 'https://dog.ceo/api/breeds/list/all';
+const select = document.querySelector('.breeds');
+fetch(BREEDS_URL).then(res => {
+  return res.json();
+}).then(data => {
+  const breedsObject = data.message;
+  const breedsArray = Object.keys(breedsObject);
+
+  for (let i = 0; i < breedsArray.length; i++) {
+    const option = document.createElement('option');
+    option.value = breedsArray[i];
+    option.innerText = breedsArray[i];
+    select.appendChild(option);
+  } // console.log(breedsArray);
+
+});
+data.select.addEventListener('change', e => {
+  let url = `https://dog.ceo/api/breed/${e.target.value}/images/random`;
+  getDoggo(url);
+});
+const img = document.querySelector('.dog-img');
+const spinner = document.querySelector('.spinner');
+
+const getDoggo = url => {
+  spinner.classList.add('show');
+  img.classList.remove('show');
+  fetch(url).then(res => {
+    return res.json();
+  }).then(data => {
+    img.src = data.message;
+  });
+};
+
+img.addEventListener('load', () => {
+  spinner.classList.remove('show');
+  img.classList.add('show');
+});

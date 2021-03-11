@@ -1,0 +1,22 @@
+
+
+
+
+
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(75, 155, 68);
+  padding: 0;
+}
+
+img {
+  display: block;
+  
+}
+
+/*# sourceMappingURL=style.2101ffd7.css.map */

@@ -1,0 +1,17 @@
+
+<html>
+  <head>
+    <script src="49b779b396c6957d3f262eb2509534de" defer=""></script>
+  </head>
+
+<body>
+
+  <section id="userInput">
+    <input type="text"> 
+    <button>Go</button>
+  </section>
+    <section id="progOutput">
+    </section>
+
+  </body>
+</html>

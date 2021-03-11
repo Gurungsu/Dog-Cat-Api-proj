@@ -1,0 +1,127 @@
+
+
+#progOutput tbody img{
+  max-width: 300px;
+}
+
+#progOutput table{
+  overflow: auto;;
+  border-style: solid;
+  border-color:rgb(253, 254, 255);
+}
+
+#progOutput {
+  grid-area: catdata;
+  background-color: rgb(151, 187, 144);
+}
+
+#topContainer {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 
+    "header header"
+    "catdata control";
+}
+
+#pageTitle {
+  grid-area: header;
+  background-color: forestgreen;
+}
+
+#userInput {
+  background-color: orange;
+  
+}
+#progOutput td{
+  border-style:solid;
+  border-color: rgb(141, 131, 98);
+  background-attachment: fixed;
+}
+
+
+
+
+
+
+
+h1{
+  margin: top 20px;
+  border-color: rgb(1, 212, 72);
+  border-style:solid;
+}
+
+h2{
+  margin-top:10px;
+  
+}
+ #listImageContainer{
+  border-color: rgb(119, 163, 134);
+  border-style: solid ;
+  margin-top:40px;
+  border-width:110px
+  
+ }
+
+#randomImageContainer{
+ background-color:rgb(45, 148, 71);
+ border-style:solid;
+}
+
+button{
+  margin-left:75;
+  text-align:center;
+  background-color:rgb(20, 197, 79);
+}
+
+.alert{
+  display: 4px;
+}
+
+.img{
+  border-color: rgb(20, 414, 11);
+  border-style: solid;
+ 
+}
+
+
+#doggoDropDown{
+  padding:4px;
+  border-color: rgb(167, 196, 62);
+  border-width: 4fr,2fr;
+}
+
+#dogInfo{
+  text-align:center;
+  margin-top:75px;
+  background-color:rgb(214, 173, 38)
+  
+}
+
+.form-control{
+  font-size:1.8em;
+}
+
+.container-fluid{
+  background:#854141;
+  margin-top:10px;
+  padding-bottom:30px;
+  border-style: solid;
+  border-color:rgb(50, 59, 187);
+}
+
+.container-fluid:last-of-type{
+  padding-bottom:30px;
+  column-gap: width 45px;
+  display: grid;
+  grid-template-columns: 75fr 1fr;
+}
+
+.container, .card-deck{
+  margin-top:30px;
+  margin-bottom: 30%;
+  padding-left: 30px;
+  display: grid;
+  
+}
+
+

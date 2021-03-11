@@ -1,0 +1,50 @@
+"use strict";
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_axios.default.get("https://api.thecatapi.com/v1/images/search?breed_ids=beng").then(r => r.data).then(dogData => {
+  console.log(dogData.message); // Access only part of the response
+});
+
+let theInput;
+let theButton;
+theInput = document.querySelector("#userInput > input[type=text]");
+theButton = document.querySelector("#userInput > button");
+let tableBody;
+tableBody = document.querySelector("#progOutput table > tbody");
+theButton?.addEventListener("click", () => {
+  const inputLen = theInput?.value.length ?? 0;
+  if (inputLen > 0) console.log("You entered", theInput?.value);else console.log("Please enter some text");
+});
+let breedLimit = Number(theInput?.value); // convert string to number
+// NaN = Not a Number
+
+if (isNaN(breedLimit)) breedLimit = 10;
+const catURL = "https://api.thecatapi.com/v1/breeds";
+
+_axios.default.get(catURL, {
+  params: {
+    limit: breedLimit
+  }
+}).then(r => r.data).then(breeds => {});
+
+_axios.default.get("https://api.thecatapi.com/v1/breeds").then(r => r.data).then(breeds => {
+  const meowArr = breeds.map(b => {
+    return {
+      name: b.name,
+      description: b.description,
+      image: b.image
+    };
+  });
+  return meowArr;
+}).then(meows => {
+  meows.forEach(m => {
+    // only the code to create the images are shown below
+    // you should be able to figure out the missing code to
+    // insert the image into a table cell
+    const catImage = document.createElement("img");
+    catImage.setAttribute("src", m.image.url);
+  });
+});

@@ -1,0 +1,27 @@
+"use strict";
+
+var _axios = _interopRequireDefault(require("axios"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_axios.default.get("https://api.thecatapi.com/v1/images/search?breed_ids=beng").then(r => r.data).then(dogData => {
+  console.log(dogData.message); // Access only part of the response
+});
+
+let theInput;
+let thebutton;
+theInput = document.querySelector("#userInput > input[type=text]");
+thebutton = document.querySelector("#userInput > button");
+thebutton?.addEventListener("click", () => {
+  const inputLen = theInput?.value.length ?? 0;
+  if (inputLen > 0) console.log("You entered", theInput?.value);else console.log("Please enter some text");
+  let breedLimit = Number(theInput?.value);
+  if (isNaN(breedLimit)) breedLimit = 10;
+  const catURL = "https://api.thecatapi.com/v1/breeds";
+
+  _axios.default.get(catURL, {
+    params: {
+      limit: breedLimit
+    }
+  }).then(r => r.data).then(breeds => {});
+});

@@ -1,0 +1,34 @@
+<html>
+  
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-10 offset-md-1">
+          
+          <p id="dogInfo"></p>
+          <div class="alert alert-danger" role="alert"></div>
+          
+          <button class="btn btn-primary random"></button>
+        </div>    
+      </div>
+    </div>
+  
+    
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-10 offset-md-1">
+          <h2>Select from a dropdown</h2>
+          <div class="form-group">
+            <select name="doggosDropdown" id="doggoDropDown" class="form-control"></select>
+          </div>
+          <div id="listImageContainer"></div>
+          <button class="btn btn-primary list">More from this breed please!</button>
+        </div>
+      </div>
+   </div><!--end container-->
+  </div><!--end container fluid-->
+  
+  
+  
+
+</html>

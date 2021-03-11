@@ -1,0 +1,152 @@
+
+
+
+
+
+
+#progOutput tbody img{
+  width:300px;
+  height: 300px;
+
+}
+
+#progOutput table{
+  height: 100%;
+  width: 100%;
+  overflow: auto;;
+  border-style: solid;
+  border-color:rgb(253, 254, 255);
+  
+}
+
+#progOutput {
+
+  grid-area: catdata;
+  background-color: rgb(151, 187, 144);
+ 
+}
+#topContainer { 
+  
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 
+    "header header"
+    "catdata control";
+}
+
+#pageTitle {  
+  margin-left: 400px;
+  grid-area: header;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+#userInput {
+  background-color: rgb(40, 107, 138);
+  
+}
+#progOutput td{
+  border-style:solid;
+  border-color: rgb(141, 131, 98);
+  background-attachment: fixed;
+}
+
+h1{
+  margin: top 20px;
+  border-color: rgb(1, 212, 72);
+  border-style:solid;
+}
+table {
+  border-collapse: collapse;
+}
+
+td {
+width:2px;
+  
+  border: 1px solid black;
+  padding: 0;
+}
+
+
+
+
+
+
+h2{
+  margin-top:10px;
+  
+}
+ #listImageContainer{
+  border-color: rgb(119, 163, 134);
+  margin-top:10px;
+  margin-right:100px;
+  margin-left:10px;
+  border-width:26px
+ }
+
+#randomImageContainer{
+ background-color:rgb(45, 148, 71);
+ border-style:solid;
+}
+
+button{
+  font-size: 14px;
+  padding: 20px;
+  margin-right: 1px;
+  text-align:center;
+  border-color: rgb(4, 2, 12);
+  background-color:rgb(176, 199, 134);
+}
+
+.alert{
+  display: 4px;
+}
+
+.img{
+  max-zoom: 300px;
+  max: size 300px;
+  border-color: rgb(20, 414, 11);
+  border-style: solid;
+ 
+}
+
+
+#DogSelector{
+  padding:2px;
+  border-style:solid;
+  background-color:rgb(17, 143, 132);
+  border-color: rgb(154, 194, 11);
+  border-width: 4fr,2fr;
+}
+
+
+.form-control{
+  font-size:1.8em;
+}
+
+.container-fluid{
+  background:#a8b688;
+  margin-top:10px;
+  padding-bottom:100px;
+  border-style: solid;
+  border-color:rgb(233, 175, 16);
+}
+
+.container-fluid:last-of-type{
+  padding-bottom:5%;
+  column-gap: width 45px;
+  display: grid;
+  grid-template-columns: 75fr 1fr;
+}
+
+.container{
+  margin-top:70px;
+  margin-bottom: 30%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  
+}
+
+
+
+/*# sourceMappingURL=style.2101ffd7.css.map */

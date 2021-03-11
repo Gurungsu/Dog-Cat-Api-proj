@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="49b779b396c6957d3f262eb2509534de"></script>
+    <link rel="stylesheet" href="4e51ac37af385b15b1bf6ccf9c97a233">
+</head>
+<body>
+    <div id="topContainer">
+        <h2 id="pageTitle">List of Cat Breeds</h2>
+        <section id="userInput">
+          <input type="text">
+          <button>ok</button>
+        </section>
+        <section id="progOutput">
+            <table>
+                <tbody>
+            
+                </tbody>
+            </table>
+        </section>
+      </div>
+    <div id="bottomContainer">
+        <h2 id="dogTitle">10 random dog pics</h2>
+        <section id="userInputDog">
+            <button>FETCH ME DOGS!</button>
+          </section>
+          <section id="progOutputDog">
+              <table>
+                  <tbody>
+              
+                  </tbody>
+              </table>
+          </section>
+    </div>
+</body>
+
+
+
+  
+    <div class="container1">
+      <div class="row text-center">
+        <div class="col-md-10 offset-md-1">
+          
+          <p id="dogInfo"></p>
+          <div class="alert alert-danger" role="alert"></div>
+          
+          <button class="btn btn-primary random"></button>
+        </div>    
+      </div>
+    </div>
+  
+    
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-10 offset-md-1">
+          <h2>Select from a dropdown</h2>
+          <div class="form-group">
+            <select name="doggosDropdown" id="doggoDropDown" class="form-control"></select>
+          </div>
+          <div id="listImageContainer"></div>
+          <button class="btn btn-primary list">More from this breed please!</button>
+        </div>
+      </div>
+   </div><!--end container-->
+  </div><!--end container fluid-->
+  
+  
+  
+
+</html>

@@ -1,0 +1,14 @@
+
+<html>
+  <head>
+    <script src="/main.0a9666eb.js" defer=""></script>
+  </head>
+
+<body>
+  <section id="userInput">
+    <input type="text">
+    <button>Go</button>
+  </section>
+    <section id="progOutput"></section>
+  </body>
+</html>
